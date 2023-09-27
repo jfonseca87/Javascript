@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="editButtons">
+      <span title="STYLES">
+        <button data-edit="bold"><b>B</b></button>
+        <button data-edit="italic"><i>I</i></button>
+        <button data-edit="underline"><u>U</u></button>
+        <button data-edit="strikeThrough"><s>S</s></button>
+      </span>
+
+      <span title="TEXT FORMAT">
+        <button data-edit="formatBlock:p">P</button>
+        <button data-edit="formatBlock:H1">H1</button>
+        <button data-edit="formatBlock:H2">H2</button>
+        <button data-edit="formatBlock:H3">H3</button>
+      </span>
+
+      <span title="FONT SIZE">
+        <button data-edit="fontSize:1">&#8613;s</button>
+        <button data-edit="fontSize:3">&#8613;M</button>
+        <button data-edit="fontSize:5">&#8613;L</button>
+      </span>
+
+      <span title="LISTS">
+        <button data-edit="insertUnorderedList">UL</button>
+        <button data-edit="insertOrderedList">OL</button>
+      </span>
+
+      <span title="ALIGNMENT">
+        <button data-edit="justifyLeft">&#8676;</button>
+        <button data-edit="justifyCenter">&#8596;</button>
+        <button data-edit="justifyRight">&#8677;</button>
+      </span>
+
+      <span title="CLEAR FORMATTING">
+        <button data-edit="removeFormat">&times;</button>
+        <select id="tags" onchange="onChange(this.options[this.selectedIndex].value)">
+          <option value="" selected>Select ...</option>
+          <option value="{First_Name}">First Name</option>
+          <option value="{Last_Name}">Last Name</option>
+          <option value="{Project_Name}">Project Name</option>
+        </select>
+      </span>
+    </div>
+
+    <div contenteditable>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+
+    <sub>Tip: you can drag images or links from another tab</sub>
+
+    <script src="index.js"></script>
+  </body>
+</html>

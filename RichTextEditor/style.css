@@ -1,0 +1,15 @@
+.editButtons span {
+  display: inline-block;
+  white-space: nowrap;
+}
+[data-edit] {
+  float: left;
+  border: 0;
+  font: 12px/1 monospace;
+  background: #ddd;
+  padding: 4px 8px;
+}
+[contenteditable] {
+  padding: 4px 16px;
+  background: #eee;
+}
